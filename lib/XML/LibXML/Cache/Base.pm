@@ -1,6 +1,6 @@
 package XML::LibXML::Cache::Base;
 {
-  $XML::LibXML::Cache::Base::VERSION = '0.10';
+  $XML::LibXML::Cache::Base::VERSION = '0.11';
 }
 use strict;
 
@@ -81,7 +81,7 @@ sub _cache_write {
 # Handling of dependencies
 
 # We register an input callback that never matches but records all URIs
-# that are accessed during parsing of the stylesheet.
+# that are accessed during parsing.
 
 sub _match_cb {
     my $uri_str = shift;
@@ -99,7 +99,7 @@ sub _match_cb {
             [ -1, -1 ];
     }
     else {
-        # The stylesheet depends on an unsupported URI
+        # Unsupported URI, disable caching
         $deps_found = undef;
     }
 
@@ -123,11 +123,15 @@ XML::LibXML::Cache::Base - Base class for XML::LibXML caches
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 DESCRIPTION
 
-Base class for the document and stylesheet caches.
+Base class for the document and style sheet caches.
+
+=head1 METHODS
+
+=head2 new
 
 =head1 AUTHOR
 
@@ -135,7 +139,7 @@ Nick Wellnhofer <wellnhofer@aevum.de>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Nick Wellnhofer.
+This software is copyright (c) 2012 by Nick Wellnhofer.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

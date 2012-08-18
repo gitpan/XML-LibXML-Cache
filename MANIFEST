@@ -1,3 +1,4 @@
+Changes
 LICENSE
 MANIFEST
 META.yml
@@ -7,6 +8,7 @@ dist.ini
 lib/XML/LibXML/Cache.pm
 lib/XML/LibXML/Cache/Base.pm
 lib/XML/LibXSLT/Cache.pm
+t/release-pod-coverage.t
 t/release-pod-syntax.t
 t/xml.t
 t/xml/test01-entity.xml

@@ -1,6 +1,6 @@
 package XML::LibXML::Cache;
 {
-  $XML::LibXML::Cache::VERSION = '0.10';
+  $XML::LibXML::Cache::VERSION = '0.11';
 }
 use strict;
 
@@ -56,18 +56,18 @@ XML::LibXML::Cache - Document cache for XML::LibXML
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
     my $cache = XML::LibXML::Cache->new;
 
     my $doc = $cache->parse_file('file.xml');
-    my $doc = $cache->parse_html_file('file.html', %opts);
+    my $doc = $cache->parse_html_file('file.html', \%opts);
 
 =head1 DESCRIPTION
 
-XML::LibXML::Cache is a cache for XML::LibXML documents loaded from
+XML::LibXML::Cache is a cache for L<XML::LibXML> documents loaded from
 files. It is useful to speed up loading of XML files in persistent web
 applications.
 
@@ -89,7 +89,7 @@ Creates a new cache. Valid options are:
 
 =item parser
 
-The XML::LibXML parser object that should be used to load documents if you
+The L<XML::LibXML> parser object that should be used to load documents if you
 want to use certain parser options. If this options is missing a parser
 with default options will be used.
 
@@ -99,13 +99,13 @@ with default options will be used.
 
     my $doc = $cache->parse_file($filename);
 
-Works like parse_file in XML::LibXML.
+Works like L<XML::LibXML::Parser/parse_file>.
 
 =head2 parse_html_file
 
     my $doc = $cache->parse_html_file($filename, \%opts);
 
-Works like parse_html_file in XML::LibXML.
+Works like L<XML::LibXML::Parser/parse_html_file>.
 
 =head1 AUTHOR
 
@@ -113,7 +113,7 @@ Nick Wellnhofer <wellnhofer@aevum.de>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Nick Wellnhofer.
+This software is copyright (c) 2012 by Nick Wellnhofer.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
