@@ -1,6 +1,6 @@
 package XML::LibXSLT::Cache;
 {
-  $XML::LibXSLT::Cache::VERSION = '0.11';
+  $XML::LibXSLT::Cache::VERSION = '0.12';
 }
 use strict;
 
@@ -50,7 +50,7 @@ XML::LibXSLT::Cache - Style sheet cache for XML::LibXSLT
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 
